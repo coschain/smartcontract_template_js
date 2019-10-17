@@ -9,7 +9,7 @@
   
     ```shell
     const Gladiator = require('smartcontract_template_js/duel.js').Gladiator;
-    const gladiator = new Gladiator("alice", "herPrivKey");
+    const gladiator = new Gladiator("alice", "herPrivKey", "gladiator", "duel", "testnet");
     gladiator.open_arena("skyrim_admin", "skyrim_room_1", "10.000000");
     ```
   
@@ -17,7 +17,7 @@
   
     ```shell
     const Gladiator = require('smartcontract_template_js/duel.js').Gladiator;
-    const gladiator = new Gladiator("bob", "hisPrivKey");
+    const gladiator = new Gladiator("bob", "hisPrivKey", "gladiator", "duel", "testnet");
     gladiator.join_arena("alice", "skyrim_admin", "skyrim_room_1", "10.000000");
     ```
 
@@ -25,7 +25,7 @@
   
     ```shell
     const Gladiator = require('smartcontract_template_js/duel.js').Gladiator;
-    const gladiator = new Gladiator("skyrim_admin", "hisPrivKey");
+    const gladiator = new Gladiator("skyrim_admin", "hisPrivKey", "gladiator", "duel", "testnet");
     gladiator.close_arena("alice", "bob");
     ```
 
