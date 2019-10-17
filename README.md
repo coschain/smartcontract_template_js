@@ -7,8 +7,6 @@
 
   * alice creates an arena with arena_id `skyrim_room_1`, stakes 10 COS, `skyrim_admin` is the referee
   
-  * Ssss
-  
     ```shell
     const Gladiator = require('smartcontract_template_js/duel.js').Gladiator;
     const gladiator = new Gladiator("alice", "herPrivKey");
