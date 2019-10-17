@@ -9,10 +9,10 @@ class Gladiator {
 	constructor(acc, key) {
 		this.account = acc;
 		this.priv_key = key;
-		this.contract_owner = "hackson10";
+		this.contract_owner = "gladiator";
 		this.contract_name = "duel";
 		this._cos = new Cos("test", "https://testnode.contentos.io");
-		this._cos.wallet.addAccount("hackson10", "2y74w4czs26NC2xaZmCtfarN8dC8s4mwrXJA4tvtUnCukyS2jE");
+		this._cos.wallet.addAccount(this.account, this.priv_key);
 	}
 
 	open_arena(referee, arena_id, stake) {
@@ -24,7 +24,7 @@ class Gladiator {
 			checksumBin.push(buf.readUInt8(i));
 		}
 
-		let openParam = [this.account, checksumBin];
+		let openParam = [referee, checksumBin];
 		let openParamStr = JSON.stringify(openParam);
 		(async() => {
 		  let result = await this._cos.wallet.contractCall(this.account, this.contract_owner, this.contract_name, "open_arena", openParamStr, stake);

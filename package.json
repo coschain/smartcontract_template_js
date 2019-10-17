@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/coschain/smartcontract_template_js#readme",
   "dependencies": {
-    "@coschain/cosjs": "^1.2.1"
+    "@coschain/cosjs": "^1.2.3"
   }
 }
