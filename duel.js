@@ -6,12 +6,16 @@ class Gladiator {
 	// priv_key: string;
 	// contract_owner: string;
 	// contract_name: string;
-	constructor(acc, key) {
+	constructor(acc, key, contract_owner, contract_name, network_type) {
 		this.account = acc;
 		this.priv_key = key;
-		this.contract_owner = "gladiator";
-		this.contract_name = "duel";
-		this._cos = new Cos("test", "https://testnode.contentos.io");
+		this.contract_owner = contract_owner;
+		this.contract_name = contract_name;
+		if(network_type === 'testnet') {
+			this._cos = new Cos("test", "https://testnode.contentos.io");
+		} else if(network_type === 'mainnet') {
+			this._cos = new Cos("test", "https://mainnode.contentos.io");
+		}
 		this._cos.wallet.addAccount(this.account, this.priv_key);
 	}
 

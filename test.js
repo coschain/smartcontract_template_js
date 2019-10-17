@@ -1,7 +1,7 @@
 const Gladiator = require('./duel.js').Gladiator;
-const gladiator1 = new Gladiator("player1", "3QJXyNaWyfmjkrpxLEsDXyp9zSjSnZwXyqyg9iqXnr8TGWh3RF");
-const gladiator2 = new Gladiator("player2", "3Kz5rByk76xYBHRC4Dd5wtPeJuVSu6fdxeG7KwrHxyQZPE6MFH");
-const referee = new Gladiator("gladiator", "32pzKFv6PJHRdYXG3ZkDvmqFPNupr7T3kpHTFJYTDqVGErZvrX");
+const gladiator1 = new Gladiator("player1", "3QJXyNaWyfmjkrpxLEsDXyp9zSjSnZwXyqyg9iqXnr8TGWh3RF", "gladiator", "duel", "testnet");
+const gladiator2 = new Gladiator("player2", "3Kz5rByk76xYBHRC4Dd5wtPeJuVSu6fdxeG7KwrHxyQZPE6MFH", "gladiator", "duel", "testnet");
+const referee = new Gladiator("gladiator", "32pzKFv6PJHRdYXG3ZkDvmqFPNupr7T3kpHTFJYTDqVGErZvrX", "gladiator", "duel", "testnet");
 
 function sleep(ms){
     return new Promise(resolve=>{
