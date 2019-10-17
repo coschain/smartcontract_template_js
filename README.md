@@ -2,6 +2,7 @@
   ### a library to interact with duel smart contract
 
   install duel sdk: `npm i smartcontract_template_js --save`
+  
   contract name is `duel`, contract ownner is `gladiator`  
 
   * alice creates an arena with arena_id `skyrim_room_1`, stakes 10 COS, `skyrim_admin` is the referee
